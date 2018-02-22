@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://arwen.space">
-  <title>Hello World | Arwen&#39;s space</title>
+  <title>ES2015笔记 | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="基本语法 let定义变量，var还是可以用，let会使变量处于一个块级作用域。  const定义常量。  =&amp;gt;定义匿名函数，省略function，类似lambda。左边是输入，右边是返回或者语句块。  函数可以链式调用。 123456789101112let newSet = names  .map((name, index) =&amp;gt; &amp;#123;    return &amp;#123;">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://arwen.space/2017/07/02/hello-world/index.html">
+<meta property="og:title" content="ES2015笔记">
+<meta property="og:url" content="http://arwen.space/2018/02/22/ES2015笔记/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-09-07T04:28:43.000Z">
+<meta property="og:description" content="基本语法 let定义变量，var还是可以用，let会使变量处于一个块级作用域。  const定义常量。  =&amp;gt;定义匿名函数，省略function，类似lambda。左边是输入，右边是返回或者语句块。  函数可以链式调用。 123456789101112let newSet = names  .map((name, index) =&amp;gt; &amp;#123;    return &amp;#123;">
+<meta property="og:updated_time" content="2018-02-22T10:22:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="ES2015笔记">
+<meta name="twitter:description" content="基本语法 let定义变量，var还是可以用，let会使变量处于一个块级作用域。  const定义常量。  =&amp;gt;定义匿名函数，省略function，类似lambda。左边是输入，右边是返回或者语句块。  函数可以链式调用。 123456789101112let newSet = names  .map((name, index) =&amp;gt; &amp;#123;    return &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -157,35 +158,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES2015笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      ES2015笔记
     </h1>
   
 
         
-        <a href="/2017/07/02/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-02T02:55:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
+        <a href="/2018/02/22/ES2015笔记/" class="archive-article-date">
+  	<time datetime="2018-02-22T10:21:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><ol>
+<li><p>let定义变量，var还是可以用，let会使变量处于一个块级作用域。</p>
+</li>
+<li><p>const定义常量。</p>
+</li>
+<li><p>=&gt;定义匿名函数，省略function，类似lambda。左边是输入，右边是返回或者语句块。</p>
+</li>
+<li><p>函数可以链式调用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newSet = names</div><div class="line">  .map(<span class="function">(<span class="params">name, index</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">id</span>: index,</div><div class="line">      <span class="attr">name</span>: name</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">  .filter(<span class="function"><span class="params">man</span> =&gt;</span> man.id % <span class="number">2</span> == <span class="number">0</span>)</div><div class="line">  .map(<span class="function"><span class="params">man</span> =&gt;</span> [man.name])</div><div class="line">  .reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a.concat(b))</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(newSet) <span class="comment">//=&gt; [ 'Will', 'Peter', 'John', 'Mike' ]</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>=&gt;定义的匿名函数最大的特点：上下文绑定。当在匿名函数中使用<code>this</code>和<code>arguments</code>时，上下文会被绑定到定义函数所在域的上下文，域的区分实际上要看“{}”所在。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">  <span class="attr">hello</span>: <span class="string">'world'</span>,</div><div class="line">  foo() &#123;</div><div class="line">    <span class="keyword">let</span> bar = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.hello</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> bar</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>上下文的问题。</p>
+<p>JavaScript 的函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念。</p>
+<p>例如：</p>
+<blockquote>
+<p>var func1 = function(arg1, arg2) {};</p>
+</blockquote>
+<p>就可以通过 <code>func1.call(this, arg1, arg2)</code>或者 <code>func1.apply(this, [arg1, arg2])</code>来调用。其中 this 是你想指定的上下文，他可以任何一个 JavaScript 对象(JavaScript 中一切皆对象)，<code>call</code> 需要把参数按顺序传递进去，而 <code>apply</code> 则是把参数放在数组里。当你的参数是明确知道数量时，用 <code>call</code>，而不确定的时候，用 <code>apply</code>。当参数数量不确定时，函数内部也可以通过 <code>arguments</code> 这个数组来便利所有的参数。</p>
+</li>
+<li><p>模版字符串，用`来代替”或者’，支持多行，支持用”${}”变量注入。</p>
+</li>
+<li><p>定义方法属性可以省略”function”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">  <span class="comment">// before</span></div><div class="line">  foo: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'foo'</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// after</span></div><div class="line">  bar() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'bar'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>__proto__</code>注入。</p>
+<p>直接赋予某个对象一个<code>__proto__</code>属性，属性值为某个类的实例，那么这个对象就会强制变成这个类的实例，这个设计可以用来做类的扩展。</p>
+</li>
+<li><p>动态属性。</p>
+<p>对象属性的名称在域内是变化的，可以用<code>[]</code>来定义动态属性名。</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line"><span class="keyword">let</span> outArr = arr.map(<span class="function"><span class="params">n</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    [ n ]: n,</div><div class="line">    [ <span class="string">`<span class="subst">$&#123;n&#125;</span>^2`</span> ]: <span class="built_in">Math</span>.pow(n, <span class="number">2</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.dir(outArr) <span class="comment">//=&gt;</span></div><div class="line">  [</div><div class="line">    &#123; <span class="string">'1'</span>: <span class="number">1</span>, <span class="string">'1^2'</span>: <span class="number">1</span> &#125;,</div><div class="line">    &#123; <span class="string">'2'</span>: <span class="number">2</span>, <span class="string">'2^2'</span>: <span class="number">4</span> &#125;,</div><div class="line">    &#123; <span class="string">'3'</span>: <span class="number">3</span>, <span class="string">'3^2'</span>: <span class="number">9</span> &#125;</div><div class="line">  ]</div></pre></td></tr></table></figure>
+<ol>
+<li>多重赋值。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [ x, y ] = [ <span class="number">1</span>, <span class="number">2</span> ]</div><div class="line">[ x, ,y ] = [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]</div><div class="line"><span class="keyword">let</span> &#123; users, posts &#125; = &#123;<span class="attr">users</span>: <span class="number">1</span>, <span class="attr">posts</span>: <span class="number">2</span>&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>可以使用默认参数和后续参数，其中用<code>...args</code>来使用后续参数。和python一样，默认参数必须在后续参数的前面。</li>
+</ol>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>javascript的数据类型分为<strong>值类型</strong>和<strong>引用类型</strong>。值类型有Undefined、Null、Boolean、Number 和 String 型。Object对象和Array数组还有函数则是引用类型。</p>
+<p>用<code>new String(&quot;bar&quot;)</code>的方式，可以强制使用引用类型。</p>
+<p>下面是一些ES2015定义的新类型。</p>
+<ol>
+<li><p>Set和WeakSet</p>
+<p>Set的特点是重复元素忽略，WeakSet只接受引用类型，引用解除，自动删除这个元素。它们也有一些自带的方法。</p>
+</li>
+<li><p>Map和WeakMap</p>
+<p>object的键值对中，key必须是字符串或者数字，而Map可以接受任何对象作为key。WeakMap的key和value都只能是引用类型，会同时检查键和值的引用，只要其一的引用被解除，键值对就会被删除。</p>
+</li>
+<li><p>和一般面向对象型变成类似，特点是不支持定义类的默认属性，constructor函数作为构造器存在，子类构造函数必须先调用父类构造器，支持静态方法，不支持静态成员变量，不支持私有属性，不支持多重继承。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">  yell() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'yell'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name, gender, age) &#123;</div><div class="line">    <span class="keyword">super</span>() <span class="comment">// must call `super` before using `this` if this class has a superclass</span></div><div class="line"></div><div class="line">    <span class="keyword">this</span>.name = name</div><div class="line">    <span class="keyword">this</span>.gender = gender</div><div class="line">    <span class="keyword">this</span>.age = age</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  isAdult() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.age &gt;= <span class="number">18</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Man</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name, age) &#123;</div><div class="line">    <span class="keyword">super</span>(name, <span class="string">'man'</span>, age)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> me = <span class="keyword">new</span> Man(<span class="string">'iwillwen'</span>, <span class="number">19</span>)</div><div class="line"><span class="built_in">console</span>.log(me.isAdult()) <span class="comment">//=&gt; true</span></div><div class="line">me.yell()</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h4><p>和python的生成器类似。function后面多一个*，代表不是普通的方法，而是生成器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">fibo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> a = <span class="number">1</span></div><div class="line">  <span class="keyword">let</span> b = <span class="number">1</span></div><div class="line"></div><div class="line">  <span class="keyword">yield</span> a</div><div class="line">  <span class="keyword">yield</span> b</div><div class="line"></div><div class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">let</span> next = a + b</div><div class="line">    a = b</div><div class="line">    b = next</div><div class="line">    <span class="keyword">yield</span> next</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> generator = fibo()</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</div><div class="line">  <span class="built_in">console</span>.log(generator.next().value) <span class="comment">//=&gt; 1 1 2 3 5 8 13 21 34 55</span></div></pre></td></tr></table></figure>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><p>es2015有了原生的模块化机制，采用import……from……的形式。引入是只会导入暴露的接口，让方法暴露的方法是在前面加上export，也可以在模块中批量暴露方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// module.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  method1,</div><div class="line">  method2</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> M <span class="keyword">from</span> <span class="string">'./module'</span></div><div class="line">M.method1()</div></pre></td></tr></table></figure>
+<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>Promise 是一种用于解决回调函数无限嵌套的工具（当然，这只是其中一种），其字面意义为“保证”。它的作用便是“免去”异步操作的回调函数，保证能通过后续监听而得到返回值，或对错误处理。它能使异步操作变得井然有序，也更好控制。</p>
+<p>不是很懂。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">    api.call(<span class="string">'fetch_data'</span>, (err, data) =&gt; &#123;</div><div class="line">      <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err)</div><div class="line"></div><div class="line">      resolve(data)</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
 
@@ -220,7 +274,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -270,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://arwen.space/2017/07/02/hello-world/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://arwen.space/2018/02/22/ES2015笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,15 +360,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/02/22/ES2015笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ES2015笔记
-        
-      </div>
-    </a>
   
+    <a href="/2017/07/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -317,7 +389,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本语法"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据类型"><span class="toc-number">2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成器"><span class="toc-number">3.</span> <span class="toc-text">生成器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#模块化"><span class="toc-number">4.</span> <span class="toc-text">模块化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Promise"><span class="toc-number">5.</span> <span class="toc-text">Promise</span></a></li></ol>
                     </div>
                 </span>
             </div>
