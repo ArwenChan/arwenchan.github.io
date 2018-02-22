@@ -41,7 +41,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #000000"></div>
+<div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -96,7 +96,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #000000"></div>
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -188,7 +188,6 @@
 <li><p>=&gt;定义匿名函数，省略function，类似lambda。左边是输入，右边是返回或者语句块。</p>
 </li>
 <li><p>函数可以链式调用。</p>
-<p>more &gt;&gt;</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newSet = names</div><div class="line">  .map(<span class="function">(<span class="params">name, index</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">id</span>: index,</div><div class="line">      <span class="attr">name</span>: name</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">  .filter(<span class="function"><span class="params">man</span> =&gt;</span> man.id % <span class="number">2</span> == <span class="number">0</span>)</div><div class="line">  .map(<span class="function"><span class="params">man</span> =&gt;</span> [man.name])</div><div class="line">  .reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a.concat(b))</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(newSet) <span class="comment">//=&gt; [ 'Will', 'Peter', 'John', 'Mike' ]</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>=&gt;定义的匿名函数最大的特点：上下文绑定。当在匿名函数中使用<code>this</code>和<code>arguments</code>时，上下文会被绑定到定义函数所在域的上下文，域的区分实际上要看“{}”所在。</p>
