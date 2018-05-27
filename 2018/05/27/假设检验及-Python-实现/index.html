@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://arwen.space">
-  <title>Archives: 2018/2 | Arwen&#39;s space</title>
+  <title>假设检验及 Python 实现 | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Arwen&apos;s space.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Arwen&#39;s space">
-<meta property="og:url" content="http://arwen.space/archives/2018/02/index.html">
+  <meta name="description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
+<meta name="keywords" content="数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="假设检验及 Python 实现">
+<meta property="og:url" content="http://arwen.space/2018/05/27/假设检验及-Python-实现/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="Arwen&apos;s space.">
+<meta property="og:description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
+<meta property="og:updated_time" content="2018-05-27T06:29:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arwen&#39;s space">
-<meta name="twitter:description" content="Arwen&apos;s space.">
+<meta name="twitter:title" content="假设检验及 Python 实现">
+<meta name="twitter:description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -158,48 +160,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-假设检验及-Python-实现" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/22/ES2015笔记/" class="archive-article-date">
-  	<time datetime="2018-02-22T10:21:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/22/ES2015笔记/">ES2015笔记</a>
+    <h1 class="article-title" itemprop="name">
+      假设检验及 Python 实现
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/05/27/假设检验及-Python-实现/" class="archive-article-date">
+  	<time datetime="2018-05-27T06:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设检验的总结。</p>
+<a id="more"></a>
+<h3 id="统计学两大基石"><a href="#统计学两大基石" class="headerlink" title="统计学两大基石"></a>统计学两大基石</h3><ul>
+<li>中心极限定理：在适当的条件下，大量相互独立随机变量的均值经适当标准化后依分布收敛于<strong>正态分布</strong>。这组定理是数理统计学和误差分析的理论基础，指出了大量随机变量之和近似服从正态分布的条件。并且样本均值分布的方差和总体均值的方差有如下关系：</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -212,17 +217,119 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://arwen.space/2018/05/27/假设检验及-Python-实现/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/02/22/ES2015笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES2015笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#统计学两大基石"><span class="toc-number">1.</span> <span class="toc-text">统计学两大基石</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -245,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
