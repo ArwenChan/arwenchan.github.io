@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://arwen.space/2018/05/27/假设检验及-Python-实现/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
 <meta property="og:description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
-<meta property="og:updated_time" content="2018-05-27T06:29:25.000Z">
+<meta property="og:updated_time" content="2018-05-27T07:24:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="假设检验及 Python 实现">
 <meta name="twitter:description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
@@ -31,7 +31,7 @@
     #container.show {
       background: linear-gradient(200deg,#a0cfe4,#e8c37e);
     }
-  </style>
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
   
@@ -39,7 +39,7 @@
 </head>
 
 <body>
-  <div id="container" q-class="show:isCtnShow">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
@@ -183,7 +183,14 @@
         <p>显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设检验的总结。</p>
 <a id="more"></a>
 <h3 id="统计学两大基石"><a href="#统计学两大基石" class="headerlink" title="统计学两大基石"></a>统计学两大基石</h3><ul>
-<li>中心极限定理：在适当的条件下，大量相互独立随机变量的均值经适当标准化后依分布收敛于<strong>正态分布</strong>。这组定理是数理统计学和误差分析的理论基础，指出了大量随机变量之和近似服从正态分布的条件。并且样本均值分布的方差和总体均值的方差有如下关系：</li>
+<li><p>中心极限定理：在适当的条件下，大量相互独立随机变量的均值经适当标准化后依分布收敛于<strong>正态分布</strong>。这组定理是数理统计学和误差分析的理论基础，指出了大量随机变量之和近似服从正态分布的条件。并且样本均值分布的方差和总体均值的方差有如下关系：</p>
+<script type="math/tex; mode=display">
+\sigma _{\bar {x}}^2=\sigma^2 /n</script><blockquote>
+<p>n 是样本数，不是总体数。</p>
+</blockquote>
+</li>
+<li><p>大数定律：样本数量越多，则其平均就越趋近期望值。</p>
+</li>
 </ul>
 
       
@@ -567,6 +574,23 @@ MathJax.Hub.Queue(function() {
     </div>
 
 </div>
-  </div>
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
