@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://arwen.space">
-  <title>Arwen&#39;s space</title>
+  <title>解锁A/B测试— Part 1: 设计和实现（译） | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Arwen&apos;s space.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Arwen&#39;s space">
-<meta property="og:url" content="http://arwen.space/index.html">
+  <meta name="description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。 一起来看看我们是怎么做的。 什么是 A/B 测试？我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改">
+<meta name="keywords" content="数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解锁A&#x2F;B测试— Part 1: 设计和实现（译）">
+<meta property="og:url" content="http://arwen.space/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="Arwen&apos;s space.">
+<meta property="og:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。 一起来看看我们是怎么做的。 什么是 A/B 测试？我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改">
+<meta property="og:updated_time" content="2018-05-28T07:46:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arwen&#39;s space">
-<meta name="twitter:description" content="Arwen&apos;s space.">
+<meta name="twitter:title" content="解锁A&#x2F;B测试— Part 1: 设计和实现（译）">
+<meta name="twitter:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。 一起来看看我们是怎么做的。 什么是 A/B 测试？我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -171,16 +173,14 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-解锁A-B测试—-Part-1-设计和实现（译）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-解锁A-B测试—-Part-1-设计和实现（译）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/">解锁A/B测试— Part 1: 设计和实现（译）</a>
+    <h1 class="article-title" itemprop="name">
+      解锁A/B测试— Part 1: 设计和实现（译）
     </h1>
   
 
@@ -262,16 +262,75 @@ ga('send', 'pageview');
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/">更多 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://arwen.space/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/27/假设检验及-Python-实现/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">假设检验及 Python 实现</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -286,252 +345,34 @@ ga('send', 'pageview');
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-假设检验及-Python-实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/27/假设检验及-Python-实现/">假设检验及 Python 实现</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/27/假设检验及-Python-实现/" class="archive-article-date">
-  	<time datetime="2018-05-27T06:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设检验的总结。</p>
-        
-          <a class="article-more-a" href="/2018/05/27/假设检验及-Python-实现/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/27/假设检验及-Python-实现/">更多 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是-A-B-测试？"><span class="toc-number">1.</span> <span class="toc-text">什么是 A/B 测试？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验设置"><span class="toc-number">2.</span> <span class="toc-text">实验设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#执行"><span class="toc-number">3.</span> <span class="toc-text">执行</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-ES2015笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/22/ES2015笔记/">ES2015笔记</a>
-    </h1>
+  
+  
   
 
-        
-        <a href="/2018/02/22/ES2015笔记/" class="archive-article-date">
-  	<time datetime="2018-02-22T10:21:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前些日子心血来潮看了下新的 javascript 语法，整理了一下笔记。</p>
-        
-          <a class="article-more-a" href="/2018/02/22/ES2015笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/22/ES2015笔记/">更多 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/02/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-02T02:55:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-        
-          <a class="article-more-a" href="/2017/07/02/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/02/hello-world/">更多 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -554,8 +395,8 @@ ga('send', 'pageview');
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
