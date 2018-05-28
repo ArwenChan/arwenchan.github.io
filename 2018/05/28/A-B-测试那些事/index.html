@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://arwen.space">
-  <title>Archives: 2018 | Arwen&#39;s space</title>
+  <title>A/B 测试那些事 | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Arwen&apos;s space.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Arwen&#39;s space">
-<meta property="og:url" content="http://arwen.space/archives/2018/index.html">
+  <meta name="description" content="这篇主要讨论，在实际进行 A/B 测试时，一些重要环节的实操和要注意的地方。">
+<meta name="keywords" content="数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A&#x2F;B 测试那些事">
+<meta property="og:url" content="http://arwen.space/2018/05/28/A-B-测试那些事/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="Arwen&apos;s space.">
+<meta property="og:description" content="这篇主要讨论，在实际进行 A/B 测试时，一些重要环节的实操和要注意的地方。">
+<meta property="og:updated_time" content="2018-05-28T13:24:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arwen&#39;s space">
-<meta name="twitter:description" content="Arwen&apos;s space.">
+<meta name="twitter:title" content="A&#x2F;B 测试那些事">
+<meta name="twitter:description" content="这篇主要讨论，在实际进行 A/B 测试时，一些重要环节的实操和要注意的地方。">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -171,36 +173,66 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-A-B-测试那些事" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      A/B 测试那些事
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/28/A-B-测试那些事/" class="archive-article-date">
+
+        
+        <a href="/2018/05/28/A-B-测试那些事/" class="archive-article-date">
   	<time datetime="2018-05-28T13:23:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/28/A-B-测试那些事/">A/B 测试那些事</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这篇主要讨论，在实际进行 A/B 测试时，一些重要环节的实操和要注意的地方。</p>
+<a id="more"></a>
+<h3 id="指标"><a href="#指标" class="headerlink" title="指标"></a>指标</h3><p>一个测量值能够成为实验指标，除了要很好的概括我们希望看到的变化以外，还有需要三个必要条件：</p>
+<ul>
+<li>容易测量</li>
+<li>确定知道需要的实验时长，比如，一个月或是一周</li>
+<li>在实验对照中，确实会变化</li>
+</ul>
+<p>对于一些比较抽象的问题，怎么找到可以概括问题的指标？</p>
+<ul>
+<li>调查。对个体进行提问。</li>
+<li>回归性分析。对已有旧数据分析。</li>
+<li>焦点小组。面对面对个体小组进行访谈。</li>
+<li>用户体验研究。利用科技手段跟踪用户体验，并进行分析。</li>
+<li>外部数据或者学术论文。</li>
+</ul>
+<p>怎么样算是好的指标？</p>
+<ul>
+<li>敏感性。指定改变发生时，指标会变化。</li>
+<li>稳健型。不相关的其他改变发生时，指标保持不变。</li>
+</ul>
+<p>常用指标：</p>
+<ol>
+<li>比率（rate），匿名事件发生的次数／样本大小。（不需要登陆）</li>
+<li>概率（probability），用户事件发生的次数／样本大小。（需要登陆）</li>
+<li>计数（count）、总和（sum）。</li>
+<li>描述统计值，均值（mean）、中位数（median）、四分位数等等。</li>
+<li>任意两个值的比。</li>
+</ol>
+<p>这些指标常常是有时间单位的，每日、每小时、每周去计算。</p>
+<h3 id="效应量和统计功效"><a href="#效应量和统计功效" class="headerlink" title="效应量和统计功效"></a>效应量和统计功效</h3><p>当我们想要测量到的最小变化（实际统计显著水平）很小时，可能会出现这种情况，两组之间的差异已经达到实际统计显著水平，但是因为没有达到显著性差异而没有成功拒绝零假设（β错误）。反过来也可能达到了显著水平但没有实际意义（α错误）。这是因为两个分布有重叠，而效应量（effective size）就是衡量这种情况，它表示的是两组样本分布的总体的非重叠程度。效应量越大，重叠程度越小，效应明显；效应量越小则相反。而统计功效（statistic power）就是用来衡量一个检验能够避免上述两种错误的能力，用 1-β 表示，一般取0.8。</p>
+<h3 id="样本容量"><a href="#样本容量" class="headerlink" title="样本容量"></a>样本容量</h3><p>样本容量越大，样本均值分布的标准差越小，分布曲线越瘦高，统计功效越好。所以我们在设计实验时，必须选择足够大的样本容量。有一些成熟的库可以计算需要的样本容量，也可以用在线计算的方式。<a href="http://www.evanmiller.org/ab-testing/sample-size.html" target="_blank" rel="external">这里</a>就是一个在线计算的网站。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -212,7 +244,7 @@ ga('send', 'pageview');
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -225,213 +257,119 @@ ga('send', 'pageview');
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://arwen.space/2018/05/28/A-B-测试那些事/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/28/解锁A-B测试-第2部分：评估和功效分析（译）/" class="archive-article-date">
-  	<time datetime="2018-05-28T09:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/28/解锁A-B测试-第2部分：评估和功效分析（译）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解锁A / B测试 - Part 2：评估和功效分析（译）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/28/解锁A-B测试-第2部分：评估和功效分析（译）/">解锁A / B测试 - Part 2：评估和功效分析（译）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#指标"><span class="toc-number">1.</span> <span class="toc-text">指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效应量和统计功效"><span class="toc-number">2.</span> <span class="toc-text">效应量和统计功效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样本容量"><span class="toc-number">3.</span> <span class="toc-text">样本容量</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/" class="archive-article-date">
-  	<time datetime="2018-05-28T07:44:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/">解锁A/B测试— Part 1: 设计和实现（译）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/27/假设检验及-Python-实现/" class="archive-article-date">
-  	<time datetime="2018-05-27T06:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/27/假设检验及-Python-实现/">假设检验及 Python 实现</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/22/ES2015笔记/" class="archive-article-date">
-  	<time datetime="2018-02-22T10:21:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/22/ES2015笔记/">ES2015笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -454,8 +392,8 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
