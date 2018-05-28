@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://arwen.space/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
 <meta property="og:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。">
-<meta property="og:updated_time" content="2018-05-28T07:50:49.000Z">
+<meta property="og:updated_time" content="2018-05-28T09:21:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解锁A&#x2F;B测试— Part 1: 设计和实现（译）">
 <meta name="twitter:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。">
@@ -211,12 +211,18 @@ ga('send', 'pageview');
 </ul>
 <p>那么，当测试更复杂而不仅仅是一个按钮时，会发生什么变化？让我们考虑一下我们做了什么来测试我们的推荐系统。</p>
 <p>由于复杂算法的成功可以由多种因素驱动，所以使用多个<strong>OEC是</strong>一个好习惯；在我们的例子中，我们找到了信息检索中常用的度量：</p>
-<ol>
+<ul>
 <li>满意的点击率：从用户的角度看，导致满意结果的点击量。</li>
+</ul>
+<ul>
 <li><a href="https://en.wikipedia.org/wiki/Discounted_cumulative_gain" target="_blank" rel="external">NDCG</a>（标准化折扣累积增益）：文档的效用，基于其在结果列表中的位置。</li>
+</ul>
+<ul>
 <li>点击时间：会话开始和点击推荐媒体项目之间的时间。</li>
+</ul>
+<ul>
 <li><a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank" target="_blank" rel="external">平均互惠等级</a>：已经正确预测的项目的反序等级的调和平均值</li>
-</ol>
+</ul>
 <p>我们的自变量是推荐算法：它的值 A 是按新近程度排列，最后发布的文档首先显示; 值 B 是我们的大革新，首先显示算法认为最适合用户的东西。</p>
 <p>我们的<strong>实验单元</strong>  - 也称为展示 - 是页面视图，位于用户可以看到推荐项目的所有页面上。</p>
 <p>现在我们都准备好了，准备好了！</p>
@@ -323,6 +329,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/05/28/解锁A-B测试-第2部分：评估和功效分析（译）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          解锁A / B测试 - Part 2：评估和功效分析（译）
+        
+      </div>
+    </a>
   
   
     <a href="/2018/05/27/假设检验及-Python-实现/" id="article-nav-older" class="article-nav-link-wrap">
