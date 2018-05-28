@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://arwen.space">
   <title>解锁A/B测试— Part 1: 设计和实现（译） | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。 一起来看看我们是怎么做的。 什么是 A/B 测试？我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改">
+  <meta name="description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。">
 <meta name="keywords" content="数据分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解锁A&#x2F;B测试— Part 1: 设计和实现（译）">
 <meta property="og:url" content="http://arwen.space/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。 一起来看看我们是怎么做的。 什么是 A/B 测试？我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改">
-<meta property="og:updated_time" content="2018-05-28T07:46:27.000Z">
+<meta property="og:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。">
+<meta property="og:updated_time" content="2018-05-28T07:50:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解锁A&#x2F;B测试— Part 1: 设计和实现（译）">
-<meta name="twitter:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。 一起来看看我们是怎么做的。 什么是 A/B 测试？我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改">
+<meta name="twitter:description" content="如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？ 你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -195,6 +195,7 @@ ga('send', 'pageview');
       
         <p>如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？</p>
 <p>你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。</p>
+<a id="more"></a>
 <p>一起来看看我们是怎么做的。</p>
 <h3 id="什么是-A-B-测试？"><a href="#什么是-A-B-测试？" class="headerlink" title="什么是 A/B 测试？"></a>什么是 A/B 测试？</h3><p>我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改善还是让情况更糟了？</p>
 <p>我们以 A/B 测试的形式建立了对照实验，随机的分配用户到两个组，对照组——使用现有的版本，也就是按照最近看过的来排序，实验组——需要评估的新方案，也就是按照推荐来展示。一旦实验建立起来，我们就要收集评估指标了。</p>

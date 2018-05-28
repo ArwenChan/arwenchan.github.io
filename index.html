@@ -195,41 +195,9 @@ ga('send', 'pageview');
       
         <p>如果你花费了很多力气做了一新功能，你肯定希望它在用户眼里是棒棒哒。但是怎么样以用户喜好来量度这个新功能呢？你怎么确定新功能确实提高了用户体验，而不是相反呢？</p>
 <p>你可能已经听过A／B测试了，但可能并不了解它，不知道怎么开始，需要些什么，结果又是什么样。</p>
-<p>一起来看看我们是怎么做的。</p>
-<h3 id="什么是-A-B-测试？"><a href="#什么是-A-B-测试？" class="headerlink" title="什么是 A/B 测试？"></a>什么是 A/B 测试？</h3><p>我们开发了一个物品推荐系统，想要知道，比起直接把最近看过的放在第一个，哪个方案更有效？新方案作出了改善还是让情况更糟了？</p>
-<p>我们以 A/B 测试的形式建立了对照实验，随机的分配用户到两个组，对照组——使用现有的版本，也就是按照最近看过的来排序，实验组——需要评估的新方案，也就是按照推荐来展示。一旦实验建立起来，我们就要收集评估指标了。</p>
-<p>在这里要小心！要评估方案变更产生的影响，难点在于选择正确的成功指标：这些指标可能基于用户流量的增加，对新物品的探索，系统对用户偏好的响应性等。正如<a href="http://link.springer.com/chapter/10.1007%2F978-0-387-85820-3_8" target="_blank" rel="external">Shani和Gunawardana（2011）</a>所建议的那样，评估一个功能需要在特定的应用场景中，找出场景中可能影响其是否成功的属性。</p>
-<p>我们掌握了所有指标之后，为了确定对照组和实验组之间是否存在统计上的显著性差异，我们必须进行假设检验——广泛用于评估 A/B 测试的是 t 检验，来确定，在所有数据是从一个足够大的正态分布的样本中提取的情况下，两组数据是否有显著性差异。</p>
-<h3 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h3><p>现在我们知道A / B测试是什么以及如何评估它，让我们仔细看看怎么设置它。</p>
-<p>要小心，因为实验设置可能很无聊，很难弄清楚，但如果这一步做得不对，整个实验就没用了！</p>
-<p>根据<a href="http://dl.acm.org/citation.cfm?id=1485091" target="_blank" rel="external">Kohavi等（2009）</a>和<a href="https://books.google.nl/books?id=6zq3c3FaCq8C&amp;lpg=PR11&amp;ots=42YTcyf7IJ&amp;dq=Springer%20Ranjit%20K%20Design%20of%20experiment%20using%20the%20taguchi%20approach%2C%202001.&amp;lr&amp;pg=PR10#v=onepage&amp;q&amp;f=false" target="_blank" rel="external">Ranjit（2001）</a>的研究，开始实验前需要的基本成分有三种：</p>
-<ul>
-<li><strong>总体评估标准（OEC）</strong>。也称为因变量，它是对你的目标的定量衡量。例如，测试用户界面中的蓝色按钮如果改用红色是否吸引更多关注？你如何衡量这种“关注”？您的OEC可能是<a href="https://en.wikipedia.org/wiki/Click-through_rate" target="_blank" rel="external">点击率</a>：在查看此按钮的所有时间中，点击了多少次？</li>
-<li><strong>自变量</strong>，也就是OEC的变量。在A / B测试中，只有一个自变量，其值是A和B。再次选择按钮示例：自变量就是按钮本身。蓝色的按钮是变量值A（称为<em>对照组</em>），红色的按钮是变量值B（称为<em>实验组</em>）。</li>
-<li><strong>实验单元</strong>，即计算指标的实体。用更简单的话来说，这就是你在观察实验时所观察的东西。让我们回到我们的蓝色/红色按钮示例，并假设该按钮位于您网站的主页上。你不会对任何其他页面发生什么感兴趣，因为按钮不在那里。您的实验单元可以是您的首页上的页面视图。</li>
-</ul>
-<p>那么，当测试更复杂而不仅仅是一个按钮时，会发生什么变化？让我们考虑一下我们做了什么来测试我们的推荐系统。</p>
-<p>由于复杂算法的成功可以由多种因素驱动，所以使用多个<strong>OEC是</strong>一个好习惯；在我们的例子中，我们找到了信息检索中常用的度量：</p>
-<ol>
-<li>满意的点击率：从用户的角度看，导致满意结果的点击量。</li>
-<li><a href="https://en.wikipedia.org/wiki/Discounted_cumulative_gain" target="_blank" rel="external">NDCG</a>（标准化折扣累积增益）：文档的效用，基于其在结果列表中的位置。</li>
-<li>点击时间：会话开始和点击推荐媒体项目之间的时间。</li>
-<li><a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank" target="_blank" rel="external">平均互惠等级</a>：已经正确预测的项目的反序等级的调和平均值</li>
-</ol>
-<p>我们的自变量是推荐算法：它的值 A 是按新近程度排列，最后发布的文档首先显示; 值 B 是我们的大革新，首先显示算法认为最适合用户的东西。</p>
-<p>我们的<strong>实验单元</strong>  - 也称为展示 - 是页面视图，位于用户可以看到推荐项目的所有页面上。</p>
-<p>现在我们都准备好了，准备好了！</p>
-<h3 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h3><p>好消息：这绝对是您实验中最简单的部分。根据<a href="http://link.springer.com/chapter/10.1007%2F978-0-387-85820-3_8" target="_blank" rel="external">Shani和Gunawardana（2011）的</a>说法，只有三种最佳实践要遵循：</p>
-<ul>
-<li>随机抽样用户很重要，这样A和B之间的比较是公平的;</li>
-<li>只保持项目推荐中某一方面的不同之处很重要。（例如，如果我们有兴趣评估用户界面的影响，请保留相同的底层算法 - 反之亦然）;</li>
-<li>实验需要仔细计划，因为它们可能对系统产生负面影响，这在商业应用中可能是不可接受的。</li>
-</ul>
-<p>你是否从TODO清单中检查了所有这三种最佳做法？那就可以开始了！将版本A发布到您的对照组，将版本B发布到实验组，并开始记录您需要的所有数据。</p>
-<p>你几乎要完成了！现在数据正在收集中，您只需要弄清楚如何处理它。只剩下两个步骤来完成您的测试：功效分析和评估。我们将在此旅程的第二部分引导您完成它们，即将推出！</p>
-<p>Happy coding!</p>
-<p><a href="https://medium.com/collaborne-engineering/unlocking-a-b-testing-part-one-set-up-and-execution-cb9c618f250f" target="_blank" rel="external">原文 https://medium.com/collaborne-engineering/unlocking-a-b-testing-part-one-set-up-and-execution-cb9c618f250f</a></p>
-
+        
+          <a class="article-more-a" href="/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/#more">more >></a>
+        
       
 
       
