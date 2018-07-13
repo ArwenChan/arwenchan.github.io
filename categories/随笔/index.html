@@ -6,22 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://arwen.space">
-  <title>假设检验及 Python 实现 | Arwen&#39;s space</title>
+  <title>Category: 随笔 | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
-<meta name="keywords" content="数据分析">
-<meta property="og:type" content="article">
-<meta property="og:title" content="假设检验及 Python 实现">
-<meta property="og:url" content="http://arwen.space/2018/05/27/假设检验及-Python-实现/index.html">
+  <meta name="description" content="Arwen&apos;s space.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arwen&#39;s space">
+<meta property="og:url" content="http://arwen.space/categories/随笔/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
-<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b">
-<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40">
-<meta property="og:updated_time" content="2018-05-27T09:45:41.000Z">
+<meta property="og:description" content="Arwen&apos;s space.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="假设检验及 Python 实现">
-<meta name="twitter:description" content="显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设">
-<meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b">
+<meta name="twitter:title" content="Arwen&#39;s space">
+<meta name="twitter:description" content="Arwen&apos;s space.">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -176,213 +171,71 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-假设检验及-Python-实现" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      假设检验及 Python 实现
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/07/13/他们说：姜文是中国电影的未来/" class="archive-article-date">
+  	<time datetime="2018-07-13T02:57:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/07/13/他们说：姜文是中国电影的未来/">他们说：姜文是中国电影的未来</a>
     </h1>
   
 
-        
-        <a href="/2018/05/27/假设检验及-Python-实现/" class="archive-article-date">
-  	<time datetime="2018-05-27T06:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>显著性检验作为判断两个乃至多个数据集之间是否存在差异的方法被广泛应用于各个科研领域。所谓无假设，不检验，假设检验往往基于一个想要推翻的零假设（H0）和一个想要证实的备择假设（H1），类似反证法。在零假设成立的情况下，计算拿到样本的概率（p-value），当概率低于设定的显著性水平时（如5%），认定假设不成立。统计学中的假设检验，往往是针对一个固定的统计量的。下面是笔者学习了一个月以来，对于这些假设检验的总结。</p>
-<a id="more"></a>
-<h3 id="统计学两大基石"><a href="#统计学两大基石" class="headerlink" title="统计学两大基石"></a>统计学两大基石</h3><ul>
-<li><p>中心极限定理：在适当的条件下，大量相互独立随机变量的均值经适当标准化后依分布收敛于<strong>正态分布</strong>。这组定理是数理统计学和误差分析的理论基础，指出了大量随机变量之和近似服从正态分布的条件。并且样本均值分布的方差和总体均值的方差有如下关系：<br>$$<br>\sigma _{\bar {x}}^2=\sigma^2 /n<br>$$</p>
-<p>（n 是样本数，不是总体数。）</p>
-</li>
-<li><p>大数定律：样本数量越多，则其平均就越趋近期望值。</p>
-</li>
-</ul>
-<h3 id="Z-检验和-T-检验"><a href="#Z-检验和-T-检验" class="headerlink" title="Z 检验和 T 检验"></a>Z 检验和 T 检验</h3><p>统计量 z-score：<br>$$<br>\frac{\bar {x} - \mu}{\sigma_{\bar{x}}}<br>$$</p>
-<p>在已知总体方差的情况或者样本数量较大（一般来说大于30即可），统计量服从标准正太分布，这种情况使用 Z 检验；在不知道总体方差（通常都不知道）或者样本数量较小时，统计量服从 T 分布，这种情况使用 T 检验，与 Z 检验不同，这里需要用到自由度 df。T 检验不知道总体方差，用样本方差（无偏）来代替。理论计算通常是查询 z-table 和 t-table ，用表中的值和统计量比较。编程实现时，直接计算 p-value。</p>
-<p>单样本检验：检验样本和总体之间的显著性差异，自由度为 $n_{x} - 1$。</p>
-<p>双样本检验：检验两组样本之间的显著性差异，双样本检验时总体方差使用合并方差，自由度为 $n_{x} + n_{y} - 2$。</p>
-<h4 id="Z-检验实现"><a href="#Z-检验实现" class="headerlink" title="Z - 检验实现"></a>Z - 检验实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> statsmodels.stats <span class="keyword">import</span> weightstats <span class="keyword">as</span> stests</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line">data1 = np.random.normal(loc=<span class="number">3.4</span>,scale=<span class="number">0.1</span>,size=<span class="number">100</span>)</div><div class="line">data2 = np.random.normal(loc=<span class="number">3.4</span>,scale=<span class="number">0.1</span>,size=<span class="number">100</span>)</div><div class="line">single_value=<span class="number">3.3</span></div><div class="line"></div><div class="line"><span class="comment"># 单样本</span></div><div class="line">test_result = stests.ztest(data1,value=single_value)</div><div class="line">p_value=test_result[<span class="number">1</span>]</div><div class="line"></div><div class="line"><span class="comment"># 双样本</span></div><div class="line">test_result=stests.ztest(data1, data2, value=<span class="number">0</span>)</div><div class="line">p_value=test_result[<span class="number">1</span>]</div></pre></td></tr></table></figure>
-<p><a href="http://www.statsmodels.org/dev/generated/statsmodels.stats.weightstats.ztest.html" target="_blank" rel="external">文档</a></p>
-<h4 id="T-检验实现"><a href="#T-检验实现" class="headerlink" title="T - 检验实现"></a>T - 检验实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</div><div class="line"></div><div class="line">data1 = np.random.normal(loc=<span class="number">3.4</span>,scale=<span class="number">0.1</span>,size=<span class="number">100</span>)</div><div class="line">data2 = np.random.normal(loc=<span class="number">3.4</span>,scale=<span class="number">0.1</span>,size=<span class="number">100</span>)</div><div class="line">single_value=<span class="number">3.3</span></div><div class="line"></div><div class="line"><span class="comment"># 单样本</span></div><div class="line">test_result = stats.ttest_1samp(data1, single_value)</div><div class="line">p_value = test_result[<span class="number">1</span>]</div><div class="line"></div><div class="line"><span class="comment"># 双样本</span></div><div class="line">test_result = stats.ttest_ind(data1, data2, equal_var=<span class="keyword">True</span>)</div><div class="line">p_value = test_result[<span class="number">1</span>]</div></pre></td></tr></table></figure>
-<p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html" target="_blank" rel="external">文档</a></p>
-<h3 id="卡方检验"><a href="#卡方检验" class="headerlink" title="卡方检验"></a>卡方检验</h3><p>卡方检验适用于类型变量。卡方检验有两个用途，一是单变量的分布检验，二是多变量的独立性检验。假设实验中从总体中随机取样得到的 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" alt="n">个观察值被划分为<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40" alt="k">个互斥的分类，这样每个分类都有一个对应的<strong>实际观察次数</strong>  ${\displaystyle x_{i}}({\displaystyle i=1,2,…,k})$。研究人员会对实验中各个观察值落入第 ${\displaystyle i}$ 个分类的概率 ${\displaystyle p_{i}}$ 的分布提出零假设，从而获得了对应所有第 ${\displaystyle i}$ 分类的<strong>理论期望次数</strong> ${\displaystyle m_{i}=np_{i}}$ 以及限制条件 ${\displaystyle \sum_{i=1}^{k}{p_{i}}=1}$ 和 ${\displaystyle \sum_{i=1}^{k}{m_{i}}=\sum_{i=1}^{k}{x_{i}}=n\sum_{i=1}^{k}{m_{i}}=\sum_{i=1}^{k}{x_{i}}=n}$ 。皮尔森提出，在上述零假设成立以及 ${\displaystyle n}$ 趋向 ${\displaystyle \infty }$ 的时候，以下统计量的极限分布趋向 ${\displaystyle \chi^{2}}$ 分布：</p>
-<p>$$<br>{\displaystyle \chi^{2}=\sum_{i=1}^{k}{\frac{(x_{i}-m_{i})^{2}}{m_{i}}}}<br>$$</p>
-<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 分布检验</span></div><div class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> chisquare</div><div class="line">a = [<span class="number">16</span>, <span class="number">18</span>, <span class="number">16</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">12</span>]</div><div class="line">b = [<span class="number">16</span>, <span class="number">16</span>, <span class="number">16</span>, <span class="number">16</span>, <span class="number">16</span>, <span class="number">8</span>]</div><div class="line">test_result = chisquare(a, f_exp=b)</div><div class="line">p_value = test_result[<span class="number">1</span>]</div><div class="line"></div><div class="line"><span class="comment"># 独立检验</span></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> chi2_contingency</div><div class="line">obs = np.array([[<span class="number">10</span>, <span class="number">10</span>, <span class="number">20</span>], [<span class="number">20</span>, <span class="number">20</span>, <span class="number">20</span>]])</div><div class="line">test_result = chi2_contingency(obs)</div><div class="line">p_value = test_result[<span class="number">1</span>]</div></pre></td></tr></table></figure>
-<p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html" target="_blank" rel="external">文档</a></p>
-<h3 id="方差分析和-F-检验"><a href="#方差分析和-F-检验" class="headerlink" title="方差分析和 F 检验"></a>方差分析和 F 检验</h3><p>方差分析（ANOVA）适用于连续型变量。方差分析常用来检验自变量和因变量之间的关系，或者说多组样本之间是否存在显著性差异（两组的时候，用 T 检验也可以，T 检验也是一种方差分析）。方差分析依靠F-分布为概率分布的依据，利用平方和与自由度所计算的组间与组内均方估计出F值，若有显著差异则考量进行事后比较或称多重比较（Multiple comparison），用于探讨其各组之间的差异为何。</p>
-<p>F 检验的统计量 F 是组间均方和组内均方的比值：<br>$$<br>{\displaystyle F = {\frac {\frac {\sum_{i}n_{i}(\overline Y_{i} - \overline Y_{total})^{2}}{k-1}}{\frac {\sum_{i}\sum_{j}(Y_{ij} - \overline Y_{i})^{2}}{N-k}}}}<br>$$<br>（n为组的大小，k为组数，N=nk）</p>
-<h4 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 单因素</span></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</div><div class="line"> </div><div class="line">data = np.rec.array([</div><div class="line">(<span class="string">'Pat'</span>, <span class="number">5</span>),</div><div class="line">(<span class="string">'Pat'</span>, <span class="number">4</span>),</div><div class="line">(<span class="string">'Pat'</span>, <span class="number">4</span>),</div><div class="line">(<span class="string">'Pat'</span>, <span class="number">3</span>),</div><div class="line">(<span class="string">'Pat'</span>, <span class="number">9</span>),</div><div class="line">(<span class="string">'Pat'</span>, <span class="number">4</span>),</div><div class="line">(<span class="string">'Jack'</span>, <span class="number">4</span>),</div><div class="line">(<span class="string">'Jack'</span>, <span class="number">8</span>),</div><div class="line">(<span class="string">'Jack'</span>, <span class="number">7</span>),</div><div class="line">(<span class="string">'Jack'</span>, <span class="number">5</span>),</div><div class="line">(<span class="string">'Jack'</span>, <span class="number">1</span>),</div><div class="line">(<span class="string">'Jack'</span>, <span class="number">5</span>),</div><div class="line">(<span class="string">'Alex'</span>, <span class="number">9</span>),</div><div class="line">(<span class="string">'Alex'</span>, <span class="number">8</span>),</div><div class="line">(<span class="string">'Alex'</span>, <span class="number">8</span>),</div><div class="line">(<span class="string">'Alex'</span>, <span class="number">10</span>),</div><div class="line">(<span class="string">'Alex'</span>, <span class="number">5</span>),</div><div class="line">(<span class="string">'Alex'</span>, <span class="number">10</span>)], dtype = [(<span class="string">'Archer'</span>,<span class="string">'|U5'</span>),(<span class="string">'Score'</span>, <span class="string">'&lt;i8'</span>)])</div><div class="line"> </div><div class="line">f, p = stats.f_oneway(data[data[<span class="string">'Archer'</span>] == <span class="string">'Pat'</span>].Score,</div><div class="line">                      data[data[<span class="string">'Archer'</span>] == <span class="string">'Jack'</span>].Score,</div><div class="line">                      data[data[<span class="string">'Archer'</span>] == <span class="string">'Alex'</span>].Score)</div><div class="line"> </div><div class="line"><span class="keyword">print</span> (<span class="string">'p_value:'</span>, p)</div></pre></td></tr></table></figure>
-<p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html" target="_blank" rel="external">文档</a></p>
-<h4 id="多重比较"><a href="#多重比较" class="headerlink" title="多重比较"></a>多重比较</h4><p>以其中一种事后比较方法 Tukey-kramer HSD 为例，这种检验中有一个类似 T 检验中统计量 t 的统计量 q：</p>
-<p>$$<br>{\displaystyle q={\frac {(\overline x_{max}-\overline x_{min})}{S_{p}{\sqrt {\frac {1}n_{i} + \frac {1}n_{j}}}}}}<br>$$</p>
-<p>因为要一次完成多次对比，所以不用 p-value 和做标准，而是求得 HSD 之后，再看两组均值之差是否大于 HSD。q 的临界值（critical value）由 α （显著性水平）、k（组数）、df（自由度，N - k）决定。</p>
-<p>$$<br>{\displaystyle HSD = {\frac {q_{critical}}{\sqrt 2}}{\widehat \sigma_{all}{\sqrt {\frac {1}{n_{i}} + \frac {1}{n_{j}}}}}}<br>$$</p>
-<p>其中 $\widehat \sigma_{all}$ 是所有组的合并标准差，而不仅是要比对的两组，当各组大小相同，即 $n_{i} = n_{j}$ 时，上面公式可以简化：</p>
-<p>$$<br>{\displaystyle HSD = \frac{q_{critical}}{\sqrt{n}}\widehat{\sigma}_{all}}<br>$$</p>
-<h4 id="多重比较实现"><a href="#多重比较实现" class="headerlink" title="多重比较实现"></a>多重比较实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> statsmodels.stats.multicomp <span class="keyword">import</span> pairwise_tukeyhsd</div><div class="line"></div><div class="line"><span class="comment"># 必须在方差分析之后</span></div><div class="line">mc = pairwise_tukeyhsd(data[<span class="string">'Score'</span>], data[<span class="string">'Archer'</span>])</div><div class="line">print(mc)</div><div class="line"></div><div class="line"><span class="comment">####################################################</span></div><div class="line"><span class="comment">#Multiple Comparison of Means - Tukey HSD,FWER=0.05</span></div><div class="line"><span class="comment">#=============================================</span></div><div class="line"><span class="comment">#group1 group2 meandiff  lower   upper  reject</span></div><div class="line"><span class="comment">#---------------------------------------------</span></div><div class="line"><span class="comment"># Alex   Jack  -3.3333  -6.5755 -0.0911  True </span></div><div class="line"><span class="comment"># Alex   Pat     -3.5   -6.7422 -0.2578  True </span></div><div class="line"><span class="comment"># Jack   Pat   -0.1667  -3.4089  3.0755 False </span></div><div class="line"><span class="comment"># ---------------------------------------------</span></div></pre></td></tr></table></figure>
-<h3 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h3><p><a href="https://www.jianshu.com/p/1c60c9c3fe33" target="_blank" rel="external">Excel 实现假设检验</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">电影</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/积累//" class="article-tag-list-link color3">积累</a>
+        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://arwen.space/2018/05/27/假设检验及-Python-实现/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/05/28/解锁A-B测试—-Part-1-设计和实现（译）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          解锁A/B测试— Part 1: 设计和实现（译）
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/02/22/ES2015笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ES2015笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#统计学两大基石"><span class="toc-number">1.</span> <span class="toc-text">统计学两大基石</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Z-检验和-T-检验"><span class="toc-number">2.</span> <span class="toc-text">Z 检验和 T 检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Z-检验实现"><span class="toc-number">2.1.</span> <span class="toc-text">Z - 检验实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T-检验实现"><span class="toc-number">2.2.</span> <span class="toc-text">T - 检验实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卡方检验"><span class="toc-number">3.</span> <span class="toc-text">卡方检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#实现"><span class="toc-number">3.1.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方差分析和-F-检验"><span class="toc-number">4.</span> <span class="toc-text">方差分析和 F 检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#实现-1"><span class="toc-number">4.1.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多重比较"><span class="toc-number">4.2.</span> <span class="toc-text">多重比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多重比较实现"><span class="toc-number">4.3.</span> <span class="toc-text">多重比较实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多"><span class="toc-number">5.</span> <span class="toc-text">更多</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -405,10 +258,10 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
