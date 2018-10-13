@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://arwen.space">
-  <title>Archives | Arwen&#39;s space</title>
+  <title>CSS整理——竖直居中 | Arwen&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Arwen&apos;s space.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Arwen&#39;s space">
-<meta property="og:url" content="http://arwen.space/archives/page/2/index.html">
+  <meta name="description" content="css中竖直居中的问题，终于花时间整理了出来。">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS整理——竖直居中">
+<meta property="og:url" content="http://arwen.space/2018/09/08/CSS整理——竖直居中/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
-<meta property="og:description" content="Arwen&apos;s space.">
+<meta property="og:description" content="css中竖直居中的问题，终于花时间整理了出来。">
+<meta property="og:updated_time" content="2018-10-13T03:49:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arwen&#39;s space">
-<meta name="twitter:description" content="Arwen&apos;s space.">
+<meta name="twitter:title" content="CSS整理——竖直居中">
+<meta name="twitter:description" content="css中竖直居中的问题，终于花时间整理了出来。">
   
     <link rel="alternative" href="/atom.xml" title="Arwen&#39;s space" type="application/atom+xml">
   
@@ -171,48 +173,77 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS整理——竖直居中" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/20/Linux上部署Django网站/" class="archive-article-date">
-  	<time datetime="2015-11-20T13:23:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/20/Linux上部署Django网站/">Linux上部署Django网站</a>
+    <h1 class="article-title" itemprop="name">
+      CSS整理——竖直居中
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/09/08/CSS整理——竖直居中/" class="archive-article-date">
+  	<time datetime="2018-09-08T13:23:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>css中竖直居中的问题，终于花时间整理了出来。</p>
+<a id="more"></a>
+<h3 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h3><p>主要用于inline元素在行内竖直对齐，像是img，span，还有inline-block。</p>
+<p>对于tablecell来说，对齐的是tablecell中的文字，这时候只有top，middle，bottom才有意义。</p>
+<h3 id="line-height"><a href="#line-height" class="headerlink" title="line-height"></a>line-height</h3><p>行高。padding-box内的高度，设置大小以font-size为基准。</p>
+<p>line-height由文字+行间距构成，其中行间距分为上下两半。</p>
+<h3 id="position-amp-flex"><a href="#position-amp-flex" class="headerlink" title="position &amp; flex"></a>position &amp; flex</h3><p>不用float也可以灵活布局的两个方案。其中flex比较新，老版的浏览器可能不支持。</p>
+<h3 id="行内竖直居中"><a href="#行内竖直居中" class="headerlink" title="行内竖直居中"></a>行内竖直居中</h3><p>直接在需要竖直对齐的部分运用<code>vertical-align: middle</code>。</p>
+<h3 id="block内竖直居中"><a href="#block内竖直居中" class="headerlink" title="block内竖直居中"></a>block内竖直居中</h3><p>这里只讨论固定行高的block内竖直对齐，高度auto的时候，竖直方向自动就是居中了。只考虑纯css的实现方式，如果用scss，利用变量，可以有更加灵活的方式。</p>
+<p>现在假设block内有一个p，考虑p在block中的竖直位置。</p>
+<h4 id="单行的时候"><a href="#单行的时候" class="headerlink" title="单行的时候"></a>单行的时候</h4><ol>
+<li><p>使用line-height</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="多行的时候"><a href="#多行的时候" class="headerlink" title="多行的时候"></a>多行的时候</h4><p>多行的方案在单行的时候也是可行的。</p>
+<ol>
+<li><p>使用vertical-align</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">display</span>: table;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">	<span class="attribute">display</span>: table-cell;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>同时使用line-height和vertical-align</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">1.2</span>;     <span class="comment">/* 内部行高小于外部行高的时候，vertical-align才有意义。*/</span></div><div class="line">  <span class="attribute">display</span>: inline-block;</div><div class="line">  <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用position</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(0, -50%);</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用flex</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">  <span class="attribute">flex-direction</span>: column;</div><div class="line">  <span class="attribute">justify-content</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>方案3和方案4相对更好理解。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -225,79 +256,127 @@ ga('send', 'pageview');
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://arwen.space/2018/09/08/CSS整理——竖直居中/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
+<nav id="article-nav">
+  
+    <a href="/2018/09/24/踩坑小程序云开发/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          踩坑小程序云开发
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/13/他们说：姜文是中国电影的未来/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">他们说：姜文是中国电影的未来</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2013/10/08/毕业从旅行开始/" class="archive-article-date">
-  	<time datetime="2013-10-08T13:23:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-10-08</time>
-</a>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vertical-align"><span class="toc-number">1.</span> <span class="toc-text">vertical-align</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#line-height"><span class="toc-number">2.</span> <span class="toc-text">line-height</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#position-amp-flex"><span class="toc-number">3.</span> <span class="toc-text">position & flex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内竖直居中"><span class="toc-number">4.</span> <span class="toc-text">行内竖直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#block内竖直居中"><span class="toc-number">5.</span> <span class="toc-text">block内竖直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单行的时候"><span class="toc-number">5.1.</span> <span class="toc-text">单行的时候</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多行的时候"><span class="toc-number">5.2.</span> <span class="toc-text">多行的时候</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/10/08/毕业从旅行开始/">毕业从旅行开始</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/游记//" class="article-tag-list-link color3">游记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -321,8 +400,8 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
