@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://arwen.space/2018/09/08/CSS整理——竖直居中/index.html">
 <meta property="og:site_name" content="Arwen&#39;s space">
 <meta property="og:description" content="css中竖直居中的问题，终于花时间整理了出来。">
-<meta property="og:updated_time" content="2018-10-13T03:49:43.000Z">
+<meta property="og:updated_time" content="2018-10-13T04:17:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS整理——竖直居中">
 <meta name="twitter:description" content="css中竖直居中的问题，终于花时间整理了出来。">
@@ -195,11 +195,11 @@ ga('send', 'pageview');
       
         <p>css中竖直居中的问题，终于花时间整理了出来。</p>
 <a id="more"></a>
-<h3 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h3><p>主要用于inline元素在行内竖直对齐，像是img，span，还有inline-block。</p>
+<h4 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h4><p>主要用于inline元素在行内竖直对齐，像是img，span，还有inline-block。</p>
 <p>对于tablecell来说，对齐的是tablecell中的文字，这时候只有top，middle，bottom才有意义。</p>
-<h3 id="line-height"><a href="#line-height" class="headerlink" title="line-height"></a>line-height</h3><p>行高。padding-box内的高度，设置大小以font-size为基准。</p>
+<h4 id="line-height"><a href="#line-height" class="headerlink" title="line-height"></a>line-height</h4><p>行高。padding-box内的高度，设置大小以font-size为基准。</p>
 <p>line-height由文字+行间距构成，其中行间距分为上下两半。</p>
-<h3 id="position-amp-flex"><a href="#position-amp-flex" class="headerlink" title="position &amp; flex"></a>position &amp; flex</h3><p>不用float也可以灵活布局的两个方案。其中flex比较新，老版的浏览器可能不支持。</p>
+<h4 id="position-amp-flex"><a href="#position-amp-flex" class="headerlink" title="position &amp; flex"></a>position &amp; flex</h4><p>不用float也可以灵活布局的两个方案。其中flex比较新，老版的浏览器可能不支持。</p>
 <h3 id="行内竖直居中"><a href="#行内竖直居中" class="headerlink" title="行内竖直居中"></a>行内竖直居中</h3><p>直接在需要竖直对齐的部分运用<code>vertical-align: middle</code>。</p>
 <h3 id="block内竖直居中"><a href="#block内竖直居中" class="headerlink" title="block内竖直居中"></a>block内竖直居中</h3><p>这里只讨论固定行高的block内竖直对齐，高度auto的时候，竖直方向自动就是居中了。只考虑纯css的实现方式，如果用scss，利用变量，可以有更加灵活的方式。</p>
 <p>现在假设block内有一个p，考虑p在block中的竖直位置。</p>
@@ -356,7 +356,7 @@ ga('send', 'pageview');
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vertical-align"><span class="toc-number">1.</span> <span class="toc-text">vertical-align</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#line-height"><span class="toc-number">2.</span> <span class="toc-text">line-height</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#position-amp-flex"><span class="toc-number">3.</span> <span class="toc-text">position & flex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内竖直居中"><span class="toc-number">4.</span> <span class="toc-text">行内竖直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#block内竖直居中"><span class="toc-number">5.</span> <span class="toc-text">block内竖直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单行的时候"><span class="toc-number">5.1.</span> <span class="toc-text">单行的时候</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多行的时候"><span class="toc-number">5.2.</span> <span class="toc-text">多行的时候</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#vertical-align"><span class="toc-number">1.</span> <span class="toc-text">vertical-align</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#line-height"><span class="toc-number">2.</span> <span class="toc-text">line-height</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#position-amp-flex"><span class="toc-number">3.</span> <span class="toc-text">position & flex</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内竖直居中"><span class="toc-number"></span> <span class="toc-text">行内竖直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#block内竖直居中"><span class="toc-number"></span> <span class="toc-text">block内竖直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单行的时候"><span class="toc-number">1.</span> <span class="toc-text">单行的时候</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多行的时候"><span class="toc-number">2.</span> <span class="toc-text">多行的时候</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -375,6 +375,22 @@ ga('send', 'pageview');
 
   
 
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'arwen-space'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
   
